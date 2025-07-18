@@ -28,10 +28,10 @@ SECRET_KEY = 'django-insecure-+pu@iiqhnsq$^secl^+(j8f7foqnblhf17i)nxxy799_ph8052
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
+# ALLOWED_HOSTS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
+# CSRF_TRUSTED_ORIGINS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
 
-print("DATABASE_URL from env:", os.environ.get("DATABASE_URL"))
+# print("DATABASE_URL from env:", os.environ.get("DATABASE_URL"))
 
 # Application definition
 
@@ -84,18 +84,19 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default':dj_database_url.parse(os.environ.get('DATABASE_URL')) 
-    # {
+    # 'default':dj_database_url.parse(os.environ.get('DATABASE_URL')) 
+    'default':
+    {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
 
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'railway',
-        # 'USER':'postgres',
-        # 'PASSWORD':os.environ.get('DB_PASSWORD_YO'),
-        # 'HOST':'postgres.railway.internal',
-        # 'POST':'5432',
-    # }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER':'postgres',
+        'PASSWORD':os.environ.get('DB_PASSWORD_YO'),
+        'HOST':'hopper.proxy.rlwy.net',
+        'PORT':'41246',
+    }
 }
 
 
