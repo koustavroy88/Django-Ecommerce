@@ -31,6 +31,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
 
+print("DATABASE_URL from env:", os.environ.get("DATABASE_URL"))
+
 # Application definition
 
 INSTALLED_APPS = [
