@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-+pu@iiqhnsq$^secl^+(j8f7foqnblhf17i)nxxy799_ph8052
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
-# CSRF_TRUSTED_ORIGINS = ['django-ecommerce-production-7fc9.up.railway.app','https://django-ecommerce-production-7fc9.up.railway.app']
+ALLOWED_HOSTS = ['django-ecommerce-production-21d3.up.railway.app','https://django-ecommerce-production-21d3.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['django-ecommerce-production-21d3.up.railway.app','https://django-ecommerce-production-21d3.up.railway.app']
 
 # print("DATABASE_URL from env:", os.environ.get("DATABASE_URL"))
 
