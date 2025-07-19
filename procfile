@@ -1,2 +1,1 @@
-web: gunicorn store.wsgi --log-file
-web: python manage.py migrate && gunicorn store.wsg
+web: bash -c "python manage.py migrate && gunicorn ecom.wsgi:application --bind 0.0.0.0:$PORT"
